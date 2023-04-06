@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Vehicle {
+            constructor(name,color,marca,age){
+                this.name = name;
+                this.color = color;
+                this.marca = marca;
+                this.age = age;
+            }
+            info(){
+                return `${this.name} , ${this.color},${this.marca},${this.age}`
+            }
+            start(){
+                return `${this.name} a pornit`;
+            }
+            stop(){
+                console.log(`${this.name} sa oprit`);
+            }
+
+        }
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        const vehicle1 = new Vehicle("masina", "rosie", "ford", 2015);
+        const vehicle2 = new Vehicle("motorbike", "blue", "honda", 2018);
+        console.log(vehicle1.info());
+        console.log(vehicle1.start());
+        // console.log(vehicle1.stop());
+        vehicle1.start();
+        console.log(vehicle1.pickUpPassengers());
+        console.log(vehicle1.dropOffPassengers());
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

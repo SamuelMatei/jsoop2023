@@ -10,13 +10,13 @@ myCanvas.create();
 myCanvas.createReportList();
 
 // draw a square
-let square1 = new Square(myCanvas.ctx, myCanvas.listId, 75, 50, 100, 'blue');
+let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();
 
 // draw a circle
-let circle1 = new Circle(myCanvas.ctx, myCanvas.listId, 75, 300, 100, 'green');
+let circle1 = new Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, 'green');
 circle1.draw();
 circle1.reportArea();
 circle1.reportPerimeter();

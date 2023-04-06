@@ -10,58 +10,58 @@
 
 <body>
     <p>1.Ce afiseaza urmatorul code? Default Binding in JavaScript</p>
-    <script>
+    <code><pre>
         function mesaj() {
             console.log(this.name + ' are mere');
         }
         const name = 'Ana';
         mesaj(); 
-    </script>
+    </pre></code>
     <p>2.Ce afiseaza urmatorul code?</p>
-    <script></script>
-      function mesaj() {
-       'use strict';
-       console.log(this.name + ' are mere');
-      }
-      const name = 'Ana';
-       mesaj();
-    </script>
-    <p>3.Ce afiseaza urmatorul code? Implicit Binding in JavaScript</p>
-    <script>
+    <code><pre>
         function mesaj() {
-            console.log(this.name + ' are ' + this.cantitate + ' mere');
+            'use strict'; 
+            console.log(this.name + ' are mere');
+        }
+        const name = 'Ana';
+        mesaj(); 
+    </pre></code>
+    <p>3.Ce afiseaza urmatorul code? Implicit Binding in JavaScript</p>
+    <code><pre>
+        function mesaj() {
+            console.log(this.name + ' are '+ this.cantitate+' mere');
         }
 
         const myObj = {
             cantitate: 22,
             name: 'Ana',
-            mesaj: mesaj,
+            mesaj:mesaj,
             newObj: {
                 cantitate: 26,
                 name: 'Ionel',
-                mesaj: mesaj,
+                mesaj:mesaj,
             }
         }
 
         myObj.mesaj(); // `this` is bound to `myObj` 
         myObj.newObj.mesaj(); // `this` is bound to `newObj` 
-    </script>
+    </pre></code>
     <p>4.Ce afiseaza urmatorul code? Explicit binding in JavaScript</p>
-    <script>
+    <code><pre>
         function mesaj() {
             console.log(this.name + ' are mere');
         }
 
-        const myObj1 = {
+        const myObj = {
             name: 'Ana'
         }
 
         mesaj.call(myObj); 
-    </script>
+    </pre></code>
     <p>5.Ce afiseaza urmatorul code? Constructor Call Binding in JavaScript</p>
-    <script>
+    <code><pre>
         class Person {
-            constructor(name) {
+            constructor(name){
                 this.name = name;
             }
             mesaj() {
@@ -70,9 +70,9 @@
         }
         const myName = new Person('Ana');
         myName.mesaj();
-    </script>
+    </pre></code>
     <p>6.Ce afiseaza urmatorul code? call in JavaScript</p>
-    <script>
+    <code><pre>
         // function constructor
         function Car(type, fuelType) {
             this.type = type;
@@ -93,9 +93,9 @@
 
         const newBrand = new setBrand('Audi');
         const newCarPrice = new definePrice(100000);
-    </script>
+    </pre></code>
     <p>6.Ce afiseaza urmatorul code? apply in JavaScript</p>
-    <script>
+    <code><pre>
         // function constructor
         function Car(type, fuelType) {
             this.type = type;
@@ -114,11 +114,11 @@
             console.log(`Info masina = `, this);
         }
 
-        const newBrand1 = new setBrand('BMW');
-        const newCarPrice1 = new definePrice(200000);
-    </script>
+        const newBrand = new setBrand('BMW');
+        const newCarPrice = new definePrice(200000);
+    </pre></code>
     <p>7.Ce afiseaza urmatorul code? bind in JavaScript</p>
-    <script>
+    <code><pre>
         let person = {
             name: 'Popescu Ion',
             getName: function () {
@@ -128,9 +128,9 @@
         let f = person.getName;  //callback
         // let f = person.getName.bind(person);
         setTimeout(f, 1000);
-    </script>
+    </pre></code>
     <p>8.Ce afiseaza urmatorul code? bind in JavaScript</p>
-    <script>
+    <code><pre>
         let masina = {
             name: 'Fiat',
             run: function (speed) {
@@ -143,11 +143,11 @@
                 console.log(this.name + ' zboare cu ' + speed + ' km/h.');
             }
         };
-
+        
         avion.fly(190);
         let run = masina.run.bind(avion, 160);
         run();
-    </script>
+    </pre></code>
 
 </body>
 
