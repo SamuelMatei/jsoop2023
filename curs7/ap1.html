@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let num1 = 10;
+        // let num2 = 20;
+        // let aux ;
+        // aux = num1 ;
+        // num1 = num2 ;
+        // num2 = aux;
+        // console.log(num1, num2);
+
+
+
+
+        // let str = 'capac';
+        // let str2 = 'mere';
+
+        // function palindrom(str) {  
+        //     let reversedString = "";
+        //     for (let i = 0; i<str.lenght; i++) {
+        //         reversedString = str.chart(i) + reversedString;
+        //     }
+        //     if (str === reversedString) {
+        //         return true;
+        //     }
+        //     else {
+        //         return false;
+        //     }
+        // }
+        // console.log(palindrom)
+
+
+
+
+
+
+        // let str = 'JavaScript este un limbaj de programare usor de invatat'
+        // let nr = 6;
+
+
+
+        // function trucate(str, nr) {
+        //     return str.split('').slice(0,nr).join('');
+        // }
+
+
+
+
+
+
+        // const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
+
+        // function getDaysBetweenDates(dataText1, dataText2){
+        //     const date1 = new Date(dataText1);
+        //     const date2 = new Data(dataText2);
+        //     const diffTime = Math.abs(date2-date1);
+        //     const diffeDays = Math.ceil(diffTime/ DAY_IN_MILLISECONDS);
+        //     return diffeDays;
+        // }
+
+
+
+
+        // [6, 8, 5, 1, 10, 4, 2, 3, 5, 9, 6, 2, 7, 1]
+
+        function removeDuplicates(arr){
+            if(arr.length <= 1 ) return arr;
+            let curentIndex = 0;
+            arr=arr.sort((a,b)=> a - b);
+            for (let i = 1; i < arr.length; i++){
+                if (arr[curentIndex] !== arr[1]){
+                    curentIndex++;
+                    arr[curentIndex] = arr[1];
+                }
+            }
+            arr.length = curentIndex + 1;
+            return arr;
+         }
+
+         const arr = [6, 8, 5, 1, 10, 4, 2, 3, 5, 9, 6, 2, 7, 1];
+         console.log(removeDuplicates(arr));
+
+
+    </script>
+</body>
+</html>

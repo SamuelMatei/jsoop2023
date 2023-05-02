@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "expres": "^0.0.5",
+    "save": "^2.9.0"
+  },
+  "devDependencies": {
+    "typescript": "4.7"
+  }
+}
